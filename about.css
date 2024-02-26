@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* changed from Segoe UI */
+
+}
+
+body {
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('img2.jpeg')no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 25px ;
+    background: transparent;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+
+    
+}
+
+.container .heading{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: #4b0082; /* added */
+}
+
+.container.heading::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #71b7e6, #9b5b);
+}
+
+.container form .card-details{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .card-details .card-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.card-details .card-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-details .card-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc; /* changed from none */
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border-color: #4b0082; /* changed from #9b59b6 */
+}
+
+form .circal-form .circal-title{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+
+form .circal-form .category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+form .submit{
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    color: #4b0082; /* changed from #fff */
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: transparent; /* changed from transparent */
+    background-size: cover;
+    background-position: center;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+        
+}
+
+
+
+@media (max-width:584px){
+    .container{
+        max-width: 100%;
+    }
+    form .card-details .card-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .circal-form .category{
+        width: 100%;   
+    }
+    .container form .card-details{
+        max-height: 300px;
+        overflow: scroll;
+    }
+    .card-details::_webkit_scrollbar{
+        width: 0;
+    }
+
+
+}
