@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        {# Pass the form object to the template #}
+        <form action="{{ url_for('login') }}" method="POST">
+            {# Include the CSRF token #}
+            {{ form.csrf_token }}
+            <h1>Login</h1>
+            <div class="input-box">
+                {# Use the form fields instead of the input elements #}
+                {{ form.username(placeholder="User") }}
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                {{ form.password(placeholder="Password") }}
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+        <div class="remember-forgot">
+            <label>{{ form.remember_me }} Remember Me</label>
+            {# Use the url_for function to generate the URL #}
+            <a href="{{ url_for('forgot_password') }}">Forgot password?</a>
+        </div>
+            {# Use the form submit field instead of the button element #}
+            {{ form.submit(class="btn") }}
+            <div class="register-link">
+                <p>Don't have an account?<a href="{{ url_for('register') }}">Register</a></p>
+            </div>
+        </form>
+        {# Display the flash messages if any #}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div>
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+
+</body>
+</html>
+
