@@ -1,0 +1,138 @@
+/* Use a custom font for the quiz pages */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Set the font and the background color for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center the quiz container and add some margin and padding */
+.quiz-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Style the quiz title and add some margin */
+.quiz-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the quiz question and add some margin */
+.quiz-question {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Style the quiz options and add some margin and padding */
+.quiz-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the quiz option label and add some margin and padding */
+.quiz-option-label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the quiz option input and hide it */
+.quiz-option-input {
+    display: none;
+}
+
+/* Change the background color of the quiz option label when it is checked */
+.quiz-option-input:checked + .quiz-option-label {
+    background-color: #eee;
+}
+
+/* Style the quiz submit button and add some margin and padding */
+.quiz-submit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Change the background color of the quiz submit button when it is hovered */
+.quiz-submit:hover {
+    background-color: #0069d9;
+}
+
+/* Style the quiz result and add some margin and padding */
+.quiz-result {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Style the quiz score and add some margin */
+.quiz-score {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the quiz feedback and add some margin and padding */
+.quiz-feedback {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the quiz feedback item and add some margin and padding */
+.quiz-feedback-item {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Change the border color of the quiz feedback item based on the correctness */
+.quiz-feedback-item.correct {
+    border-color: #28a745;
+}
+
+.quiz-feedback-item.incorrect {
+    border-color: #dc3545;
+}
+
+/* Style the quiz retry link and add some margin and padding */
+.quiz-retry {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Change the background color of the quiz retry link when it is hovered */
+.quiz-retry:hover {
+    background-color: #0069d9;
+}
