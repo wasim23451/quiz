@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Registration</div>
+        {# Pass the form object to the template #}
+        <form action="{{ url_for('register') }}" method="POST">
+            {# Include the CSRF token #}
+            {{ form.csrf_token }}
+            <div class="card-details">
+                <div class="card-box">
+                    <span class="details">Name</span>
+                    {# Use the form fields instead of the input elements #}
+                    {{ form.name(placeholder="Enter Your Name", required=True) }}
+                </div>
+                   <div class="card-box">
+                        <span class="details">Email </span>
+                        {{ form.email(placeholder="Enter Your Email", required=True) }}
+                    </div>
+                      
+                        <div class="card-box">
+                            <span class="details">Password</span>
+                            {{ form.password(placeholder="Enter Your Password", required=True) }}
+                        </div>
+                              <div class="card-box">
+                                    <span class="details">Phone</span>
+                                    {{ form.phone(placeholder="Enter Your Phone No", required=True) }}
+                            </div>
+                            
+                            <div class="card-box">
+                                <span class="details">Username </span>
+                                {{ form.username(placeholder="Enter Your Username", required=True) }}
+                            </div>
+                            <div class="card-box">
+                                <span class="details">College</span>
+                                {{ form.college(placeholder="Enter Your College", required=True) }}
+                            </div>
+                        </div>
+                        {# Use the form submit field instead of the button element #}
+                        {{ form.submit(class="submit") }}
+        </form>
+        </div>
+</body>
+ </html>
+
